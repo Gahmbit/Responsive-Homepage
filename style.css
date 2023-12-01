@@ -63,7 +63,7 @@ table {
     --pakistan-green: #283618ff;
     --cornsilk: #fefae0ff;
     --earth-yellow: #dda15eff;
-    --tigers-eye: #bc6c25ff;
+    --tigers-eye: #bc6c25ff; 
 /* FONTS */
     --sans-serif: 'Hedvig Letters Sans', sans-serif;
     --serif: 'Hedvig Letters Serif', serif;
@@ -71,12 +71,12 @@ table {
 
 #content{
     width: 100%;
-    min-width: 450px;
+    min-width: 360px;
     height: 200vh;
     background-color: var(--earth-yellow);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     font-family: var(--sans-serif);
 }
@@ -105,8 +105,34 @@ table {
 }
 
 .main{
+    width: 100%;
     flex: 1;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 500px;
+    background-image: url("images/craftingGuild.png");
+    background-size: cover;
+    background-position: center;
+    box-shadow: black 0px 0px 10px;
+    font-family: var(--sans-serif);
+    font-size: 4rem;
+    color: var(--cornsilk);
+    text-align: center;
+}
+
+
+#hero>h1{
+    text-shadow: black 4px 4px 1px;
+    margin: 0 2rem;
 }
 
 .footer{
@@ -126,7 +152,7 @@ table {
 }
 
 #ref a, #ref i{
-    color: white;
+    color: var(--cornsilk);
     text-decoration: none;
 }
 
@@ -139,14 +165,28 @@ table {
 
 
 @media (max-width: 500px){
-    #left, #right{
+    #right{
         width: 0%;
-        visibility: hidden;
+        display: none;
+    }
+    .header{
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 380px){
+    #center{
+        width: 0%;
+        display: none;
     }
 }
 
 @media (min-width: 1000px){
     #left, #right{
         margin: 0 50px;
+    }
+    #hero{
+        width: 90%;
     }
 }
