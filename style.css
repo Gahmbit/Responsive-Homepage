@@ -72,13 +72,14 @@ table {
 #content{
     width: 100%;
     min-width: 360px;
-    height: 200vh;
+    /* min-height: 200vh; */
     background-color: var(--earth-yellow);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     font-family: var(--sans-serif);
+    gap: 4rem;
 }
 
 .header, .footer{
@@ -111,10 +112,12 @@ table {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 4rem;
 }
 
 #hero{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -127,12 +130,79 @@ table {
     font-size: 4rem;
     color: var(--cornsilk);
     text-align: center;
+    gap: 4rem;
 }
 
 
 #hero>h1{
     text-shadow: black 4px 4px 1px;
     margin: 0 2rem;
+}
+
+#hero>h3{
+    font-size: 2rem;
+    text-shadow: black 2px 2px 1px;
+    margin: 0 2rem;
+}
+
+#pottery{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    /* min-height: 700px; */
+    background-color: var(--dark-moss-green);
+    color: var(--earth-yellow);
+    text-align: center;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+#pottery h1{
+    font-size: 4rem;
+    font-family: var(--serif);
+}
+
+#pottery p{
+    max-width: 900px;
+}
+
+/* ALL GRID CSS */
+.grid-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+}
+
+.grid-name{
+    font-style: bold;
+    font-size: 1.25rem;
+}
+
+.grid-img{
+    width: 4rem;
+    height: 4rem;
+}
+
+.grid-notes{
+    font-style: italic;
+}
+
+.grid-level{
+    color: var(--cornsilk);
+}
+
+#pottery-items{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 200px 200px;
+}
+.pott-item{
+    background-color: var(--pakistan-green);
 }
 
 .footer{
@@ -162,7 +232,15 @@ table {
     font-size: 2rem;
 }
 
-
+/* JUST FOR GRID LOL */
+@media (max-width: 680px){
+    #pottery-items{
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 200px 200px;
+        grid-template-rows: 200px 200px 200px;
+    }
+}
 
 @media (max-width: 500px){
     #right{
@@ -179,6 +257,12 @@ table {
     #center{
         width: 0%;
         display: none;
+    }
+    #pottery-items{
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: 300px;
+        grid-template-rows: repeat(6, 250px);
     }
 }
 
