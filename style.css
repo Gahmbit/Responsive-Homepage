@@ -49,7 +49,7 @@ table {
     border-spacing: 0;
 }
 
-/* Unique CSS Here */
+/* Unique CSS Starts Here */
 
 * {
     margin: 0;
@@ -58,22 +58,47 @@ table {
 }
 
 :root{
-/* CSS HEX */
+    /* CSS HEX */
     --dark-moss-green: #606c38ff;
     --pakistan-green: #283618ff;
     --cornsilk: #fefae0ff;
     --earth-yellow: #dda15eff;
     --tigers-eye: #bc6c25ff; 
-/* FONTS */
+    --sepia: #5F3907;
+    /* FONTS */
     --sans-serif: 'Hedvig Letters Sans', sans-serif;
     --serif: 'Hedvig Letters Serif', serif;
 }
 
+/* ANIMATIONS */
+@keyframes shake{
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes titleGrow{
+    0% {letter-spacing: 0.2rem;}
+    50% {letter-spacing: 0.3rem;}
+    100% {letter-spacing: 0.2rem;}
+}
+
+
 #content{
     width: 100%;
     min-width: 360px;
-    /* min-height: 200vh; */
     background-color: var(--earth-yellow);
+    background-image: url(images/julia-maior-GmNTYBH9DUE-unsplash.webp);
+    background-size: cover;
+    background-blend-mode: overlay;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -88,7 +113,7 @@ table {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--tigers-eye);
+    background-color: var(--sepia);
     box-shadow: black 0px 0px 10px;
 }
 
@@ -104,6 +129,7 @@ table {
 #center>h1{
     font-size: 2rem;
     font-family: var(--serif);
+    color: var(--cornsilk);
 }
 
 #center>h1:hover{
@@ -127,7 +153,7 @@ table {
     align-items: center;
     width: 100%;
     height: 500px;
-    background-image: url("images/craftingGuild.png");
+    background-image: url("images/craftingGuild.webp");
     background-size: cover;
     background-position: center;
     box-shadow: black 0px 0px 10px;
@@ -157,16 +183,32 @@ table {
     align-items: center;
     width: 100%;
     min-height: 700px;
-    background-color: var(--dark-moss-green);
+    background-color: var(--pakistan-green);
     color: var(--earth-yellow);
     text-align: center;
     padding: 1rem;
     gap: 2rem;
 }
 
-#pottery h1, #armour h1, #gems h1{
+#pottery, #armour, #gems{
+    box-shadow: black 0px 5px 10px;
+}
+
+
+
+#sectionTitle{
+    letter-spacing: 0.3rem;
     font-size: 4rem;
     font-family: var(--serif);
+    animation: titleGrow 3s ease-in-out 0s infinite;
+}
+
+.shake:hover, #sectionTitle:hover, .grid-img:hover{
+    animation: shake 0.5s infinite;
+}
+
+#gems h2{
+    font-size: 2rem;
 }
 
 #pottery p, #armour p{
@@ -207,13 +249,22 @@ table {
     grid-template-rows: 200px 200px;
 }
 .pott-item{
-    background-color: var(--pakistan-green);
-    border-radius: 1rem;
+    /* background-color: var(--pakistan-green); */
+    background-color: var(--dark-moss-green);
 }
 
 .arm-item{
     background-color: var(--earth-yellow);
+}
+
+.grid-item{
+    color: var(--cornsilk);
     border-radius: 1rem;
+    transition: background-color 0.2s linear 0.1s;
+}
+
+.grid-item:hover{
+    background-color: var(--sepia);
 }
 
 #skill-highlight{
@@ -233,6 +284,7 @@ table {
     padding: 1rem;
     gap: 2rem;
 }
+
 
 #gems{
     display: flex;
@@ -267,6 +319,7 @@ table {
 #amuletIco{
     width: 3rem;
 }
+
 
 
 #closer{
@@ -317,11 +370,16 @@ table {
     flex-wrap: wrap;
     gap: 0.5rem;
     margin: 0 1rem;
+    color: var(--earth-yellow);
 }
 
 #ref a, #ref i, #closingPara a{
     color: var(--cornsilk);
     text-decoration: none;
+}
+
+#closingPara a{
+    text-shadow: black 1px 1px 4px;
 }
 
 
@@ -330,7 +388,7 @@ table {
     font-size: 2rem;
 }
 
-/* JUST FOR GRID LOL */
+/* RESPONSIVENESS */
 @media (max-width: 680px){
     #pottery-items, #armour-items{
         display: grid;
@@ -343,7 +401,7 @@ table {
     }
 }
 
-@media (max-width: 500px){
+@media (max-width: 570px){
     #right{
         width: 0%;
         display: none;
@@ -357,7 +415,7 @@ table {
     }
 }
 
-@media (max-width: 380px){
+@media (max-width: 460px){
     #center{
         width: 0%;
         display: none;
