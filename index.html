@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="A small guide for the Crafting skill in Runescape 3">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <title>Let's Get Crafty - A RuneScape3 Crafting Overview</title>
+    <title>Let's Get Crafty - A RuneScape 3 Crafting Overview</title>
     <link rel="shortcut icon" href="images/Crafting_icon.ico" type="image/x-icon">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
@@ -26,8 +27,9 @@
         </div>
         <div class="main">
             <div id="hero">
+                <!-- need to convert this bg image to webP -->
                 <h1>So, you're interested in the Crafting skill?</h1>
-                <h3>See what's in store for you below...</h3>
+                <h2>See what's in store for you below...</h2>
             </div>
             <div id="pottery">
                 <h1>Pottery</h1>
@@ -72,15 +74,93 @@
                     </div>
                 </div>
             </div>
-            <div id="armour"></div>
-            <div id="gems"></div>
-            <div id="jewellry"></div>
+            <div id="armour">
+                <h1>Armour</h1>
+                <p class="armour">Though <span id="skill-highlight">Smithing</span> is more common for making <span id="skill-highlight">Melee</span> armor, you can make <span id="skill-highlight">Magic</span> and <span id="skill-highlight">Ranged</span> armour using Crafting!</p>
+                <p class="armour">This isn't everything, but a few common armour creations:</p>
+                <div id="armour-items">
+                    <div class="arm-item grid-item">
+                        <p class="grid-name">Leather</p>
+                        <img src="images/Leather_body.webp" alt="Leather Body" class="grid-img">
+                        <p class="grid-notes">Basic Ranged Armour</p>
+                        <p class="grid-level">Level 1</p>
+                    </div>
+                    <div class="arm-item grid-item">
+                        <p class="grid-name">Dragonhide</p>
+                        <img src="images/Green_dragonhide_body.webp" alt="Green Dragonhide Body" class="grid-img">
+                        <p class="grid-notes">Strong Ranged Armour</p>
+                        <p class="grid-level">Level 40</p>
+                    </div>
+                    <div class="arm-item grid-item">
+                        <p class="grid-name">Sirenic</p>
+                        <img src="images/Sirenic_hauberk.webp" alt="Sirenic Hauberk" class="grid-img">
+                        <p class="grid-notes">Max Ranged Armour</p>
+                        <p class="grid-level">Level 91</p>
+                    </div>
+                    <div class="arm-item grid-item">
+                        <p class="grid-name">Wizard Robes</p>
+                        <img src="images/Wizard_robe_top.webp" alt="Wizard Robe Top" class="grid-img">
+                        <p class="grid-notes">Basic Magic Armour</p>
+                        <p class="grid-level">Level 5</p>
+                    </div>
+                    <div class="arm-item grid-item">
+                        <p class="grid-name">Batwing</p>
+                        <img src="images/Batwing_torso.webp" alt="Batwing Torso" class="grid-img">
+                        <p class="grid-notes">Strong Magic Armour</p>
+                        <p class="grid-level">Level 35</p>
+                    </div>
+                    <div class="arm-item grid-item">
+                        <p class="grid-name">Cryptbloom</p>
+                        <img src="images/Cryptbloom_top.webp" alt="Cryptbloom Top" class="grid-img">
+                        <p class="grid-notes">Max Magic Armour</p>
+                        <p class="grid-level">Level 90</p>
+                    </div>
+                </div>
+            </div>
+            <div id="gems">
+                <h1>Gems & Jewellry</h1>
+                <p>You can do a lot with gems - and there's way too many gems to go over - but the general practice would be as follows.</p>
+                <p>First let's take our raw, uncut gem - and cut it!</p>
+                <div id="gemCut">
+                    <img src="images/Uncut_dragonstone.webp" alt="Uncut Dragonstone" id="gemIco">
+                    <h1>-></h1>
+                    <img src="images/Dragonstone.webp" alt="Dragonstone" id="gemIco">
+                </div>
+                <p>Great, now let's make it into an unstrung amulet using a <span id="gemsKey">Gold bar!</span></p>
+                <div id="amuletMake">
+                    <img src="images/Dragonstone.webp" alt="Dragonstone" id="amuletIco">
+                    <h1>+</h1>
+                    <img src="images/Gold_bar.webp" alt="Gold Bar" id="amuletIco">
+                    <h1>=</h1>
+                    <img src="images/Dragonstone_amulet_(unstrung).webp" alt="Unstrung Dragonstone Amulet" id="amuletIco">
+                </div>
+                <p>Lastly, we can string this unstrung amulet with a <span id="gemsKey">ball of wool</span> to make - you guessed in - an amulet!</p>
+                <div id="amuletString">
+                    <img src="images/Dragonstone_amulet_(unstrung).webp" alt="Unstrung Dragonstone Amulet" id="amuletIco"></i>
+                    <h1>+</h1>
+                    <img src="images/Ball_of_wool.webp" alt="Ball Of Wool" id="amuletIco"></i>
+                    <h1>=</h1>
+                    <img src="images/Dragonstone_amulet.webp" alt="Dragonstone Amulet" id="amuletIco"></i>
+                </div>
+            </div>
+            <div id="closer">
+                <div id="craftLogo">
+                    <img src="images/Crafting_icon.png" alt="Crafting Logo">
+                </div>
+                <div id="closingPara">
+                    <h1>Anything Else?</h1>
+                    <h2>Quite a bit actually...</h2>
+                    <h2>Like a lot more...</h2>
+                    <h3>... maybe too much more, lol.</h3>
+                    <h2>If you want to learn more about crafting, check out the official <a href="https://runescape.wiki/" target="_blank">Runescape Wiki</a>!</h2>
+                </div>
+            </div>
         </div>
         <div class="footer">
             <div id="ref">              
-                <a href="https://github.com/Gahmbit" alt="Github"><i class="devicon-github-original" alt="Github"></i></a>
+                <a href="https://github.com/Gahmbit" aria-label="Github"><i class="devicon-github-original" alt="Github"></i></a>
                 <h2>Gahmbit, 2023.</h2>
-                <h2>See the <a href="https://runescape.wiki/">Runescape Wiki</a> for even more info!</h2>
+                <h2>Runescape is a trademark of <a href="http://jagex.com/" target="_blank">Jagex Limited</a>.</h2>
             </div>
         </div>
     </div>
