@@ -91,6 +91,12 @@ table {
     100% {letter-spacing: 0.2rem;}
 }
 
+@keyframes fadeIn{
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+
 
 #content{
     width: 100%;
@@ -162,6 +168,7 @@ table {
     color: var(--cornsilk);
     text-align: center;
     gap: 4rem;
+    animation: fadeIn 800ms ease-in 0s;
 }
 
 
